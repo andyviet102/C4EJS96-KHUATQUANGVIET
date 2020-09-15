@@ -2,7 +2,7 @@
 {
   console.log("Câu 1:");
   console.log("1. Trong trường các hợp: biến bắt đầu bằng số, biến có kí tự đặc biệt (trừ $ và _), biến có chứa từ khoá của JS ");
-  console.log("Ví dụ: ");
+  console.log("VD:");
   console.log("let 1102Viet");
   console.log("let Viet2000");
   console.log("let double");
