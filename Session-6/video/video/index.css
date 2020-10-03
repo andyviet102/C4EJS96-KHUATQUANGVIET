@@ -1,0 +1,161 @@
+p{
+    color: red;
+}
+#div2 {
+    color: #00FF00;
+}
+.font24px{
+    font-size: 24px;
+}
+div{
+    font-size: 3em;
+    background: wheat
+  }
+#div1{
+    color: blue;
+ }
+nav > a{
+    color: yellow;
+}
+ul> li{
+    font-weight: bold;
+}
+body
+{
+    font-size: 30px;
+}
+.item > span
+{
+    font-size: 18px;
+}
+.item >div >span
+{
+    font-style: italic;
+}
+/*property*/
+/* text and font*/
+/* #center{
+        background-color: wheat;
+        text-align: center;   
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: bold;
+}
+a{
+    display: inline-block; 
+    width: 100px;
+    height: 100px;
+    background:wheat;
+    text-decoration: none;
+    color: green;
+    text-align: center;
+    font-family: fantasy;
+    line-height:6;
+  } */ 
+  /* background*/
+/* #img1{
+    height:135px ;
+    width: 500px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Moon_Jae-in_May_2017.jpg/90px-Moon_Jae-in_May_2017.jpg);
+    background-size: contain; 
+}
+ #img2{
+    height:135px ;
+    width: 500px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Moon_Jae-in_May_2017.jpg/90px-Moon_Jae-in_May_2017.jpg);
+
+}
+#img3{
+    height:135px ;
+    width: 500px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Moon_Jae-in_May_2017.jpg/90px-Moon_Jae-in_May_2017.jpg);
+    background-repeat: no-repeat;
+}
+#img4{
+    height:300px ;
+    width:800px ;
+    background-image: url(https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg);
+    background-repeat: no-repeat;
+}
+#img5{
+    height:300px ;
+    width:800px ;
+    background-image: url(https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#img6{
+    height:300px ;
+    width:800px ;
+    background-image: url(https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg);
+    background-size: cover;
+}
+#img6{
+    border: black 3px ;
+} */
+/* border*/
+/* div{
+    width: 200px;
+    height:200px;
+    background:wheat;
+    font-size:30px;
+    text-align:center;
+    line-height:200px;
+    border: solid 3px ;
+    border-color: blue;
+    border-radius: 20%;
+  } */
+  /* div{
+    background: red;
+    display:inline;
+  }
+  span{
+    background: red;
+   display: block;
+  }
+  div{
+    background: blue;
+  }
+  #span1{
+    background: red;
+  }
+  #span2{
+    background:yellow;
+    width: 500px;
+    display: inline-block;
+  } */
+  div{
+    background: wheat;
+    width:400px;
+    border: 2px solid green;
+    padding-left:40px;
+    padding-right:40;
+    padding:45px;
+  } #a >div {
+    background:wheat;
+    /*  Insert code bellow   */
+     margin-left:40px;
+     margin-right:40px;
+     margin: 50px;
+  }
+  #a{
+    /* DO NOT insert code here */
+    border:1px solid black
+  }
+  div{
+    width : 200px;
+    height : 200px;
+    font-size:2em;
+    background:wheat;
+  /* Insert code bellow   */
+    font-size: left 100px;
+  }
+    
+div{
+  width : 200px;
+  height : 200px;
+  font-size:2em;
+  background:wheat;
+  padding-left: 200px;
+  box-sizing: border-box;
+}
