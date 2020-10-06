@@ -55,19 +55,6 @@
 //     startBtn.disabled = false;
 // }
 // stopBtn.addEventListener(`click`, stopButtonCallback);
-
-
-//random
-// const x = document.getElementById('number')
-// x.addEventListener('click', () => {
-// const x = document.getElementById('show1')
-// const y = document.getElementById('show2')
-// {
-//   let i=(Math.floor(Math.random() * Athur.length));
-//   x.textContent=Athur[i].quoteText;
-//   y.textContent=Athur[i].quoteAuthor; 
-// }
-// });
 // timesheet
 // const timeSheetData=[ 
 //     {
