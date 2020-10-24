@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    height:200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* display: ; */
+    z-index: -1;
+}
+.logIn{
+    right: 0px;
+    top :0;
+    
+}
+.logInItems{
+    
+    background-color: white;
+    border: none;
+}
+.btn_menu{
+    background-color: white;
+    border: none;
+}
+#menu{
+
+}
+#menuItems .silderItems{
+    display: none;
+    width: 50%;
+}
+#showList{
+    
+    width: 70%;
+} 
+.silderItem{
+    display: block;
+    width: 100%;
+}
+.sliderShow {
+    margin-left: auto;
+    margin-right: auto;
+}
+.ss-display-container{
+    position: relative;
+}
+div{
+    display: block;
+}
+.ss-button-black{
+    color: #fff;
+    background-color: #000;
+}
+.ss-display-left {
+    position:absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+}
+.ss-display-right{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+}
+.ss-button{
+    user-select: none;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    text-decoration:none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+img{
+    vertical-align: middle;}
+img{
+    border-style: none ;
+}
+element.silderItems{
+    width: 100%;
+    display: block;
+}
