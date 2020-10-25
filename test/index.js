@@ -52,20 +52,31 @@ let btnLogin = document.getElementById("btn_login");
 let btnSubmit = document.getElementById("btnSubmit");
 let btnLogout = document.getElementById("btn_logout");
 let btnRegister =  document.getElementById("btn_register");
-let btnSubmitRegister = document.getElementById("btn_submitRegister");
+let btnSubmitRegister = document.getElementById("btnRegister");
 let userName = document.getElementById("userName");
 let password = document.getElementById("pass");
 let newUserName = document.getElementById("nUName");
 let passwordRegister = document.getElementById("pass2");
 let confirmPassword = document.getElementById("cfPassword");
-
+let userForm = document.getElementById("user_form");
+let cartForm = document.getElementById("cart_form");
+let detailForm = document.getElementById("detail_form");
+let btnManageBill = document.getElementById("btnManageBill");
+let btnManageProduct = document.getElementById("btnManageProduct");
+let adminForm = document.getElementById("admin_form");
+let filterForm = document.getElementById("filter_form");
+let btnViewProduct = document.getElementById("btn_viewListProduct");
+let btnAddNewProduct = document.getElementById("btn_addNewProduct");
+let addProductForm = document.getElementById("add-product-form");
+let viewProductForm = document.getElementById("")
+let email = document.getElementById("email.value");
 //sự kiện của nút login và sign up
 btnLogin.addEventListener("click", function(){
     showLoginForm();
 }); 
 btnSubmit.addEventListener("click", function() {
 for (let i = 0; i < user.length; i++) {
-    if (userName.value === user[i].userName && password.value === user[i].password) {
+    if (userName.value === user[i].userName && password.value == user[i].password) {
         if (user[i].role == "admin") {
             showAdminForm();
         } else if (user[i].role == "client") {
@@ -80,17 +91,22 @@ btnRegister.addEventListener("click", function(){
     showSignupform();
 });
 
+let userRe = document.getElementById('newuserName').value;
+let passRe = document.getElementById('password').value;
+let cfpassRe = document.getElementById('confirmPassword').value;
+
 btnSubmitRegister.addEventListener("click", function(){
-    if (passwordRegister.value === confirmPassword.value){
+    if (passRe === cfpassRe){
         var newClient = {
-            email: email.value,
-            userName: newUserName.value,
-            password: passwordRegister.value,
+            email: '',
+            userName: userRe,
+            password: passRe,
             role: "client"
         }
             user.push(newClient)
             console.log(user);
             showLoginform();
+            alert("Đăng ký thành công");
     }   else {
         alert("Đăng ký thất bại");
     }

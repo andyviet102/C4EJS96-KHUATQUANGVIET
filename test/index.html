@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>BASICSHOP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/d22d9dd2e6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>BASICSHOP</title>
+   
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
@@ -48,11 +49,11 @@
         <div class="logIn" id="login_form">
             <div>
                 <label for="username">Tên Đăng Nhập:</label>
-                <input class="form_control" type="text" id="userName">
+                <input class="form-control" type="text" id="userName">
             </div>
             <div>
                 <label for="pwd">Mật Khẩu:</label>
-                <input class="form_control" type="password" id="pass">
+                <input class="form-control" type="password" id="pass">
             </div>
             <div class="btn_login">
                 <button type="submit" class="btn_submit" id="btnSubmit">Đăng Nhập</button>
@@ -63,15 +64,15 @@
         <div class="signUp" id="register_form">
             <div>
                 <label for="username">Tên Đăng Nhập:</label>
-                <input type="text" class="form_control" id="newuserName">
+                <input type="text" class="form-control" id="newuserName">
             </div>
             <div>
                 <label for="pass">Mật Khẩu:</label>
-                <input type="password" class="form_control" id="password">
+                <input type="password" class="form-control" id="password">
             </div>
             <div>
                 <label for="pass2">Nhập Lại Mật Khẩu:</label>
-                <input type="password" class="form_control" id="confirmPassword">
+                <input type="password" class="form-control" id="confirmPassword">
             </div>
             <div class="btn_login">
                 <button class="btn_submit" type="submit" id="btnRegister">Đăng Ký</button>
@@ -83,6 +84,12 @@
                 <ul id="listBrand"></ul>
                 <div class="content">
                     <ul id="loadProduct"></ul>
+                </div>
+            </div>
+
+            <div id="user_form">
+                <div class="content">
+                    <ul id="listProduct"></ul>
                 </div>
             </div>
 
@@ -124,7 +131,7 @@
                 </div>
                 <div class="input">
                    
-                    <input type="text" placeholder="Mô Tả" id="newDécription">
+                    <input type="text" placeholder="Mô Tả" id="newDescription">
                 </div>
                 <button class="btn btn-outline-success" id="add_btn">Thêm và cập nhật</button>
                 <button class="btn btn-outline-danger" id="clear_btn">Xóa dữ liệu</button>
