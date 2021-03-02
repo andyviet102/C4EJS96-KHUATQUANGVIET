@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="title-header">DM basketball Survey Form</h1>
+            <p id="description" class="description-header">Thank you for taking the time to help us improve our team</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Enter your age">
+            </div>
+            <div class="form-group">
+                <label id="date-label" for="date">Date</label>
+                <input type="datetime" name="date" id="date"  class="form-control"placeholder="Date to join the club">
+            </div>
+            <div class="form-group">
+                <p>Your position in the club?</p>
+                <select id="dropdown" name="role" class="form-control">
+                    <option disabled selected value>Select current role</option>
+                    <option value="Leader">Leader</option>
+                    <option value="Captian">Captian</option>
+                    <option value="Admin Page">Admin Page</option>
+                    <option value="Member">Member</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend DM basketball club to a friend?</p>
+                <label > 
+                    <input type="radio" name="recommend" class="input-radio" value="definitely">Definitely
+                    <input type="radio" name="recommend" class="input-radio" value="maybe">Maybe
+                    <input type="radio" name="recommend" class="input-radio" value="notsure">Not sure
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Which activities do you enjoy the most at the DM Club?</p>
+                <select id="most-like" name="mostLike" class="form-control">
+                    <option disabled selected value>Select an option</option>
+                    <option value="Challenges">Challenges</option>
+                    <option value="Training">Training</option>
+                    <option value="Tournament">Tournament</option>
+                    <option value="Community">Community</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like to improve from us?</p>
+                <label >
+                    <input name="prefer" type="checkbox" class="input-checkbox" value="center">Center
+                    <input name="prefer" type="checkbox" class="input-checkbox" value="point-guard ">Point Guard 
+                    <input name="prefer" type="checkbox" class="input-checkbox" value="shooting-guard">Shooting Guard
+                    <input name="prefer" type="checkbox" class="input-checkbox" value="small-forward">Small Forward
+                    <input name="prefer" type="checkbox" class="input-checkbox" value="power-forward">Power Forward
+                </label>
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here ..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" id="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+p{
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0 10px 0;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 0;
+} 
+#img-caption {
+    text-align: center;
+    margin: 20px 0 5px 20px;
+}  
+.content{
+    font-size: 3.25rem;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #b12a2a;
+    margin: 0 0 5px 30px;
+}
+#main {
+    margin: 30px 8px;
+    border-radius: 5px;
+  }
+#tribute-info{
+    background: #eee;
+}
+
+/* day la respon cua h1 #img-caption p content*/
+  @media (max-width: 460px) {
+    h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+    #img-caption {
+        font-size: 1.4rem;
+    }
+    p{
+         font-size: 10px;
+    }
+    .content{
+        font-size: 2rem;
+    } 
+    #main {
+        margin: 0;
+    }
+  }
+
+a {
+    color: #477ca7;
+}
+
+a:hover {
+    color:orange;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+.header{
+    background-color:white;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+.img-div {
+    /* background:#212529; */
+    padding: 10px;
+    margin: 0;
+}
+  
+ul {
+    text-align: left;
+    line-height: 1.6;
+    margin: 5px 0 10px 15px;
+}
+  
+li {
+    margin: 16px 0;
+}
+table{
+    width: 100%;
+    margin: 5px 0 5px 0;
+    border: 1px solid;
+}
+td {
+    text-align:center;
+    border: 1px solid;
+}
+th{
+    border: 1px solid;
+    background-color: #eaecf0;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    font-size: 1rem;
+}

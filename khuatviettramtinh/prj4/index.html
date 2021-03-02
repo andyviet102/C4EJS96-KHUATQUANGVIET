@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <nav id="navbar">
+        <header>JS Student book</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction(Giới thiệu khóa học)</a></li>
+          <li>
+            <a class="nav-link" href="#Variable">Variable(Biến)</a>
+           </li>
+          <li>
+            <a class="nav-link" href="#Data_types">Data types(Kiểu dữ liệu)</a>
+          </li>
+          <li><a class="nav-link" href="#Loops">Loops(Vòng lặp)</a></li>
+          <li><a class="nav-link" href="#Branching_Statement">Branching Statement(Câu lệnh rẽ nhánh)</a></li>
+          <li>
+            <a class="nav-link" href="#Array">Array(Mảng)</a>
+          </li>
+          <li><a class="nav-link" href="#Object">Object(Đối tượng)</a></li>
+          <li><a class="nav-link" href="#Function">Function(Hàm)</a></li>
+          <li><a class="nav-link" href="#Function_Callback">Function-Callback(Hàm gọi lại)</a></li>
+          <li><a class="nav-link" href="#Html">HTML</a></li>
+          <li>
+            <a class="nav-link" href="#Dom_Manipulations">DOM manipulations(Thao tác DOM)</a>
+          </li>
+          <li><a class="nav-link" href="#Dom_Events">DOM Events (Các sự kiện trong DOM) </a></li>
+          <li>
+            <a class="nav-link" href="#Async/Await">Async/Await(Hàm bất đồng bộ)</a
+            >
+          </li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+          <li class="sign">@ailaviett</li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction(Giới thiệu khóa học)</header>
+          <article>
+            <ul>
+                <li>JavaScript (JS) là một ngôn ngữ lập trình cho phép thực hiện những điều phức tạp xuất hiện trên một trang web.</li>
+                <li>Mỗi khi bạn nhìn thấy một trang web thực hiện nhiều điều thú vị hơn là chỉ hiển thị thông tin, ví dụ như đồng hồ đếm ngược, hiệu ứng 2D/3D, tương tác với các thanh menu trượt ngang, dọc, v.v.. thì bạn có thể chắc chắn rằng, trang web đó có sự tham gia của JavaScript (JS).</li>
+                <li>JavaScript cùng với 2 ngôn ngữ khác là HTML và CSS, đã tạo nên một "bộ ba" không thể thiếu trong bất kỳ một trang web nào ngày nay. Để có thể dễ hình dung, bạn có thể tưởng tượng như sau: Nếu HTML là một cô gái không mấy xinh đẹp, thì CSS sẽ giúp cô ấy trở nên xinh đẹp hơn, tuy nhiên lúc này cô gái không hề biết cử động, không trả lời khi được hỏi, đây chính là lúc cần tới JavaScript(), JS sẽ giúp cô gái trở nên sống động hơn, có hồn, trở thành một cô gái hoàn hảo.</li>
+                <li>Cô gái có thể không cần quá xinh đẹp, nhưng phải biết cử động. Trước khi có 1 cô gái biết cử động, chúng ta cần phải có cô gái trước đã. Nói như vậy để các bạn thấy rằng, muốn có JavaScript, trước hết chúng ta phải có HTML.</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Variable">
+          <header>Variable(Biến)</header>
+          <article>
+           <p> 1. Ví dụ thực tế</p>
+           <ul>
+               <li>Đức là một nhân viên phục vụ bàn trong một nhà hàng tên là Pectopah, mức lương cố định của Đức là 100k/giờ.</li>
+               <li>Ngoài mức lương cố định trên, mỗi giờ Đức có thể được nhận thêm tiền boa (tips) từ khách hàng.</li>
+               <li>Số tiền mà Đức nhận được mỗi giờ có thể được biểu diễn bởi biểu thức sau:
+                <code> 100+tips</code>
+               </li>
+               <li>Số tiền boa (tips) mỗi giờ có thể ít, có thể nhiều hoặc không có tùy thuộc vào nhiều yếu tố như: giờ đó đông hay vắng khách, thái độ của khách đang vui hay buồn,...Nói tóm lại, tips có thể thay đổi (vary).</li>
+               <li>Vậy tổng số tiền mà Đức nhận được mỗi giờ phụ thuộc vào số tiền tips mà Đức nhận được trong giờ đó.</li>
+           </ul>
+           <p>
+            Trong ví dụ trên, tips được gọi là biến (biến trong biến đổi), vì nó không có giá trị cố định; giá trị của nó thay đổi theo những yếu tố khác. Trái lại, số tiền 100k được gọi là hằng số vì giá trị của nó không thay đổi.<br>
+
+            Một số ví dụ khác về biến trong thực tế: thái độ của người yêu bạn ngày hôm nay (phụ thuộc vào độ quan tâm của bạn cho người ta trong vài ngày vừa rồi), hay số lượng hoa đào nở Tết này (phụ thuộc vào thời tiết ấm hay lạnh)
+           </p>
+           <p>2. Khái niệm</p>
+           <ul>
+               <li>Trong máy tính, biến là một vùng không gian trống trong RAM, dùng để lưu trữ giá trị (value). Nói cách khác, trong lập trình có thể coi biến như một cái hộp, bên trong nó chứa một value nào đó.</li>
+               <li>Giá trị (value) nằm trong hộp không cố định mà có thể thay đổi tuỳ theo những yếu tố khác hoặc theo sự sắp đặt của bạn. Hôm nay trong hộp chứa giá trị a, ngày mai có thể chứa giá trị b, cũng giống như tiền tips của Đức lúc 8h-9h là 200k, nhưng lúc 9h-10 lại chỉ có 10k vậy.</li>
+               <li>Trong lập trình, biến là một công cụ cực kỳ quan trọng vì có những chức năng không thay thế được như sau
+                <ul>
+                    <li>Chứa giá trị (value) có thể dùng đi dùng lại được, ở ví dụ mục 1, tips ngoài việc tính lương của Đức còn có thể được dùng để xem liệu khách hàng có hài lòng với dịch vụ của hàng không (lấy tips so sánh với 5, nếu lớn hơn được tính là hài lòng chẳng hạn)</li>
+                    <li>Chứa giá trị có khả năng thay đổi trong tương lai, ví dụ tiền tips của Đức có thể sẽ còn 80% vào cuối ngày vì nhà hàng có quy định nộp lại 20% tips. Một ví dụ khác có thể kể đến như nhiệt độ từ đài khí tượng lúc đầu có thể là 25 độ C nhưng đến trưa có thể sẽ được cập nhật thành 30 độ.</li>
+                </ul>
+            </li>
+           </ul>
+           <p>3.Cú pháp</p>
+           <ul>
+             <li>Một biến cần phải được khai báo trước khi sử dụng.</li>
+             <li>Cú pháp khai báo biến trong javascript như sau:</li>
+             <code>let firstVariable</code>
+             <li>Ở câu lệnh trên:
+               <ul>
+                 <li>"firstVariable" là tên biến, có thể đặt tùy ý, lưu ý là cần phải tuân thủ theo các quy tắc đặt tên và nên đặt tên biến có ý nghĩa. Các quy tắc đặt tên biến sẽ được trình bày rõ hơn ở mục 4</li>
+                 <li>"let" là từ khóa (keyword) của javascript, sử dụng để khai báo một biến. Có 3 cách để khai báo một biến trong javascript, tương ứng với 3 keywords var, let và const. Chúng được gọi là declarations of variables.</li>
+                 <li>Trong các declarations of variables, chỉ có let là được sử dụng phổ biến hơn cả, số lượng các biến được khai báo bởi let chiếm tới 95% trong một dự án. Chính vì vậy trong chương này sẽ chỉ tập trung vào let. Ý nghĩa và cách sử dụng let sẽ được đề cập cụ thể ở phần II.</li>
+               </ul>
+             </li>
+             <li>Một vài ví dụ về cách khai báo biến:</li>
+             <code> let myMovie;
+                    const bestSchool;
+                    var dateOfBirth;
+             </code>
+           </ul>
+           <p>4.Quy tắc đặt tên</p>
+           <p>Một đoạn code viết ra với những tên biến mang ý nghĩa rõ ràng, sẽ khiến cho việc đọc code và sửa lỗi trở nên dễ dàng hơn. Ngoài việc cần phải mang ý nghĩa rõ ràng, tên biến trong lập trình sẽ phải tuân thủ một số quy tắc đặt tên như sau:</p>
+           <ul>
+             <li>Có thể bao gồm cả chữ và số.</li>
+             <li>Không được bắt đầu bằng số.</li>
+             <li>Không được chứa những ký tự đặc biệt (khoảng trắng cũng tính là ký tự đặc biệt), ngoại trừ "_" và "$".</li>
+             <li>Không được trùng với các từ khóa (keywords) của javascript.</li>
+             <li>Các keyword có trong javascript:</li>
+            <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/variable/keywords.png" alt="">
+             
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Data_types">
+          <header>Data Types</header>
+          <article>
+            <p>I. KIỂU DỮ LIỆU LÀ GÌ?(DATA TYPES)</p>
+            <p>1. Ví dụ thực tế</p>
+            <ul>
+              <li>Hãy tưởng tượng một ngày đẹp trời bạn nổi hứng muốn làm bánh gato tặng người yêu. Điều quan trọng nhất bạn phải có trước khi bắt tay vào làm bánh, đó chính là nguyên liệu.</li>
+              <li>Để làm được một chiếc bánh gato hoàn chỉnh thì sẽ phải cần rất nhiều nguyên liệu, trong ví dụ này sẽ chỉ nói đến 2 loại nguyên liệu cơ bản nhất xuất hiện trong tất cả các loại bánh gato. Đó là bơ và trứng. Vấn đề bây giờ của bạn là không biết dùng chúng như thế nào và có tác dụng gì. Sau một hồi tìm hiểu, bạn nhận ra bơ có tác dụng làm cho bánh thơm hơn, còn trứng sẽ khiến chiếc bánh tơi xốp hơn.</li>
+              <li>Trong ví dụ trên, có thể coi bơ và trứng là 2 Kiểu Dữ Liệu khác nhau, dùng với 2 mục đích khác nhau, mặc dù cùng góp sức tạo nên chiếc bánh.</li>
+            </ul>
+            <p>2.Khái niệm </p>
+            <ul>
+              <li>Chỉ có các loại số (number) thì mới có thể sử dụng để tính toán, còn văn bản chữ và các loại ký tự thì không. Bản thân máy tính không thể phân biệt được đâu là chữ và đâu là số. Vậy nên tất cả các ngôn ngữ lập trình đều sẽ có một vài quy tắc để phân biệt chúng, JavaScript cũng không ngoại lệ. Nắm được các quy tắc này, bạn sẽ dễ dàng thao tác và xử lý được với mọi loại dữ liệu.</li>
+              <li>Trong ngôn ngữ lập trình nói chung và JavaScript nói riêng, mỗi một biến (variable) sẽ mang một giá trị (value), và mỗi một value này sẽ mang một kiểu dữ liệu (data types).</li>
+              <p>Ví dụ:</p>
+              <p>Trong đoạn lệnh sau:</p>
+              <code>let x = 100;
+                    let y ="100";
+              </code>
+            </ul>
+            <ul>
+              <li>x và y đều mang giá trị là 100, nhưng giá trị 100 của x là số(number), còn giá trị "100" của y là chuỗi(string).</li>
+              <li>Có thể thấy, giá trị của x và y nhìn qua thì có vẻ giống nhau, nhưng lúc thì là number, lúc lại là string. Việc nắm rõ cách sử dụng và phân biệt được các kiểu dữ liệu là hết sức quan trọng, nhầm lẫn có thể dẫn đến những kết quả không như mong đợi.</li>
+              <li>Trong JavaScript có tất cả 7 kiểu dữ liệu:
+                <ul>
+                  <li>string</li>
+                  <li>number</li>
+                  <li>boolean</li>
+                  <li>null</li>
+                  <li>object</li>
+                  <li>undefined</li>
+                  <li>array</li>
+                  <p>Trong chương này sẽ chỉ đề cập đến một số kiểu dữ liệu quan trọng nhất, người lập trình sẽ gặp phải nhiều nhất trong một dự án, đó là String và Number. Các kiểu dữ liệu còn lại sẽ được đề cập trong các chương sau.</p>
+                </ul>
+              </li>
+            </ul>
+            <p>II. CHI TIẾT CÁC KIỂU DỮ LIỆU</p>
+          <p>1. String</p>
+          <ul>
+            <li>Dữ liệu thuộc kiểu String là một chuỗi các ký tự được bọc trong dấu quotes.</li>
+            <li>Một dữ liệu bất kỳ (kể cả số), khi được bọc trong quotes sẽ đều tính là String. Như vậy, nếu Số khi được bọc vào quotes sẽ không thể sử dụng để tính toán. Ví dụ:
+              <code>
+                let x ="1";
+                let y ="2";
+                console.log(x + y)//12
+
+                //Kết qyar ra 12 vì x và y đều là dữ liệu thuộc kiểu String, nên phép cộng là hành động nói String, không phải là phép toán cộng trong toán học.
+              </code>
+            </li>
+            <li>Trong JavaScript, có 3 loại quotes:
+              <ul>
+                <li>Dấu nháy kép (Double quotes): javascript"TechKids"</li> 
+                <li>Dấu nháy đơn (Single quotes): javascript'TechKids'</li>
+                <li>Backticks: ``` javascript`TechKids````</li>
+              </ul>
+            </li>
+            <li>Cả 3 loại quotes trên đều là dấu hiệu đánh dấu kiểu dữ liệu đang là String. Tuy nhiên Backticks đặc biệt hơn so với 2 loại còn lại:
+              <ul>
+                <li>Backticks cho phép chèn biến hoặc biểu thức vào giữa String bằng cách gói các biến hoặc biểu thức đó vào trong ${}. Ví dụ:
+                  <code> let name = "Quan";
+                    console.log(`Hello, ${name}!`) // Hello, Quan!</code>
+                    <code>    console.log(`I was born in 1996, so I am ${2018 - 1996} years old.`) // I was born in 1996, so I am 22 years old.</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>2. Number</p>
+          <ul>
+            <li>Kiểu dữ liệu Number biểu diễn các dữ liệu thuộc dạng Số, bao gồm cả số nguyên (integer) và số thực (float), có thể chứa dấu (-) để biểu thị số âm.</li>
+            <li>Ví dụ:
+              <code>  let myAge = 22;</code>
+            </li>
+            <li>Nhắc đến Number thì sẽ không thể thiếu các loại toán tử (operators). Trong JavaScript chia làm rất nhiều các loại toán tử khác nhau, trong chương này sẽ chỉ đề cập đến một số loại toán tử sử dụng thường xuyên nhất. Các loại toán tử trong chương này bao gồm:
+              <ul>
+                <li>Toán tử số học (Arithmetic Operators):
+                  Giả sử có A = 10, B = 20, bảng dưới đây sẽ mô tả và giải thích rõ ràng ý nghĩa của các loại toán tử số học
+                <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/data_types/data_types_arithmetic.png" alt=""></li>
+                <li>Toán tử so sánh (Comparison Operators)
+                  Giả sử có A = 10, B = 20, bảng dưới đây sẽ mô tả và giải thích rõ ràng ý nghĩa của các loại toán tử so sánh
+                <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/data_types/data_types_comparison_3.png" alt=""></li>
+                <li>Toán tử Logic (Logical Operators) Giả sử có A = 10, B = 20, bảng dưới đây sẽ mô tả và giải thích rõ ràng ý nghĩa của các loại toán tử logic
+                  <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/data_types/data_types_logical.png" alt="">
+                </li>
+                <li>Toán tử typeof (The typeof Operator)
+
+                  Toán tử typeof sẽ giúp bạn kiểm tra kiểu dữ liệu của một dữ liệu bất kỳ, cách sử dụng như sau:
+                <code>  typeof "John"                 // Returns string 
+                  typeof 3.14                   // Returns number
+                  typeof NaN                    // Returns number
+                  typeof false                  // Returns boolean
+                  typeof [1, 2, 3, 4]           // Returns object
+                  typeof {name:'John', age:34}  // Returns object
+                  typeof new Date()             // Returns object
+                  typeof function () {}         // Returns function
+                  typeof myCar                  // Returns undefined (if myCar is not declared)
+                  typeof null                   // Returns object</code>
+                  Trong ví dụ trên bạn sẽ thấy một vài kiểu dữ liệu mới lạ, nhưng đừng lo lắng, những kiểu dữ liệu này sẽ được đề cập tới ở các chương sau.</li>
+              </ul>
+            </li>
+          </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Loops">
+          <header>Loops (Vòng lặp)</header>
+          <article>
+            <p>I. VÒNG LẶP LÀ GÌ? (LOOPS)</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Quay lại một chút với bài tập cuối cùng ở chương trước : cho phép người dùng nhập vào tên và tuổi của 5 người khác nhau. Sau đó in ra màn hình thông tin của 5 người đó.</li>
+              <li>Có thể thấy khi đọc yêu cầu, chúng ta sẽ nghĩ ngay tới việc khai báo ra 5 cặp biến để lưu tên và tuổi của 5 người, kèm theo đó là 5 câu lệnh console.log() tương ứng, việc này tương đối mệt mỏi.</li>
+              <li>Nếu sửa yêu cầu 1 chút, thay vì 5 người sẽ là 10 người, 100 người, thì việc code ra chương trình như vậy vô cùng phiền phức và nhàm chán. Những bài toán trên thực tế còn nhiều hơn con số 100 người rất nhiều. Đây là lúc chúng ta phải cần đến Loops (Vòng lặp).</li>
+            </ul>
+            <p>2. Khái niệm</p>
+            <ul>
+              <li>Loops là một phương pháp lập trình được sử dụng trong trường hợp bạn muốn chạy đi chạy lại cùng một đoạn code, giảm tải đáng kể khối lượng công việc phải làm.</li>
+              <li>Có 2 loại loop chính thường được sử dụng nhất, đó là For Loop (Vòng lặp for) và While Loop (Vòng lặp whil</li>
+              <li>While Loop sẽ được đề cập chi tiết ở các chương sau, trong chương này sẽ đề cập chủ yếu tới For Loop.</li>
+            </ul>
+            <p>II. CÚ PHÁP (Syntax)</p>
+            <p>1. Cú pháp cơ bản</p>
+            <code>    for (bienKhoiTao; dieuKienLap; buocNhay) {
+              // phần code của bạn 
+          }</code>
+          <ul>
+            <li>bienKhoiTao, dieuKienLap và buocNhay sẽ là những câu lệnh phù hợp, tương ứng với từng trường hợp cụ thể, được ngăn cách nhau bởi dấu chấm phẩy ( ; )</li>
+            <li>Phía bên trong cặp ngoặc nhọn ( { } ) sẽ là phần code bạn muốn chạy đi chạy lại.</li>
+            <li>Một vòng lặp for được viết ra đầy đủ với các câu lệnh tương ứng với cả 3 statement như sau:
+              <code>  for (let i = 0; i < 10; i++) {
+                // phần code của bạn
+            }</code>
+            </li>
+            <li>Tạm thời bạn hãy chỉ tập trung vào con số 10, còn lại tất cả những thứ khác bên cạnh số 10 sẽ được giải thích ở phần tiếp theo.</li>
+            <li>Bạn có thể hiểu 10 là số lần bạn muốn đoạn code của mình được lặp lại.</li>
+            <li>Ví dụ:
+              <code>   for (let i = 0; i < 50; i++) {
+                console.log("Welcome to C4EJS Course!")
+            }</code>
+            </li>
+            <li>Trong ví dụ trên, đoạn string "Welcome to C4EJS Course!" sẽ được in ra màn hình 50 lần.</li>
+          </ul>
+          <p>2. Chi tiết cú pháp</p>
+          <ul>
+            <li>Cùng nhìn lại ví dụ ở phía trên:
+              <code> for (let  i= 0; i < 50 ; i++ ){
+                console.log("Welcome to C4EJS Course!")
+              }</code>
+            </li>
+            <li>Đoạn string "Welcome to C4EJS Course!" được in ra 50 lần. Nói là vậy nhưng tất cả những gì chúng ta nhìn thấy trên màn hình chỉ là một loạt "Welcome to C4EJS Course!" xếp chồng lên nhau. Chẳng có gì để đảm bảo là ở trước mặt chúng ta đã có đủ 50 dòng "Welcome to C4EJS Course!"</li>
+            <li>Để chứng minh thực sự trước mặt chúng ta là 50 dòng "Welcome to C4EJS Course!", hãy sửa đoạn code ở ví dụ trên như sau (in ra i bên cạnh "Welcome to C4EJS Course!"):
+              <code>  for (let i = 0; i < 50; i++) {
+                console.log(i, "Welcome to C4EJS Course!")
+            }</code>
+            </li>
+            <li>Như vậy là phía trước "Welcome to C4EJS Course!" sẽ xuất hiện các số lần lượt từ 0 đến 49. Từ ví dụ cũng như kết quả, có thể hiểu các thành phần của For Loop như sau:
+              <ul>
+                <li>bienKhoiTao là nơi khai báo một biến với tên biến và value tùy ý.</li>
+                <li>dieuKienLap là điều kiện mà vòng lặp được phép chạy.</li>
+                <li>buocNhay là bước nhảy của biến sau mỗi lần thực hiện đoạn code bên trong vòng lặp.</li>
+                <li>Lưu ý: Vị trí của 3 statement là cố định, không thể đảo vị trí cho nhau</li>
+              </ul>
+            </li>
+          <p>Lưu ý: cách viết i++ tương đương với i = i + 1 hoặc i+=1, nghĩa là i tăng lên 1 đơn vị. \tương tự như vậy, i = i + 3 hoặc i+=3, nghĩa là i tăng lên 3 đơn vị</p>
+          </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Branching_Statement">
+          <header>Branching Statement (Câu lệnh rẽ nhánh)</header>
+          <article>
+            <p>I. CÂU LỆNH RẼ NHÁNH LÀ GÌ? (BRANCHING STATEMENT)</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Ngay từ chương đầu tiên, chúng ta đã đi vào học ngay vào ngôn ngữ lập trình, mà chưa hề quan tâm đến khái niệm Lập Trình.</li>
+              <li>Lập trình là công việc tạo ra những phần mềm, web, app, ứng dụng di động nhằm giảm tải sức lao động của con người. Lập trình viên là những người tạo ra những ứng dụng như vậy.</li>
+            </ul>
+            <p>2. Ví dụ</p>
+            <ul>
+              <li>Khi lập trình ra một phần mềm, người lập trình sẽ phải lường trước được tất cả các tình huống mà người dùng sẽ thực hiện trong quá trình sử dụng sản phẩm của mình. Ví dụ dưới đây mô phỏng 1 chương trình kiểm tra xem người dùng đủ tuổi để lái xe ô tô chưa:
+                <ul>
+                  <li>A và B cùng sử dụng một chương trình. Chương trình này có nhiệm vụ nhận số tuổi của người dùng nhập vào:
+                    <ul>
+                      <li>Nếu số tuổi lớn hơn 18 → thông báo "Bạn đủ tuổi lái ô tô"</li>
+                      <li>Nếu số tuổi nhỏ hơn 18 → thông báo "Bạn chưa đủ tuổi lái ô tô"</li>
+                    </ul>
+                  </li>
+                  → Câu lệnh rẽ nhánh (Branching Statement) sinh ra để đáp ứng nhu cầu này của người lập trình.
+                </ul>
+              </li>
+            </ul>
+            <p>II. CÚ PHÁP</p>
+            <p>1. Câu lệnh if
+              <code> if (dieuKien1) {
+                // code 1
+            }</code>
+            <ul>
+              <li>Nếu dieuKien1 đúng, thì phần code 1 sẽ được thực hiện. Ví dụ:
+                <code>  let age = prompt("Your age? ")
+    
+                  if (age < 10) {
+                      console.log("You are Baby!");
+                  } </code>
+              </li>
+              <li>Đoạn code trên giải nghĩa như sau:
+                <ul>
+                  <li>Cho người dùng nhập tuổi, số tuổi mà người dùng nhập sẽ được lưu vào biến age.</li>
+                  <li>Nếu (if) age nhỏ hơn 10 thì màn hình sẽ in ra "You are Baby!"</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+            <p>2. Câu lệnh else if
+              <code>    if (dieuKien1) {
+                // code 1
+            } else if (dieuKien2) {
+                // code 2
+            }</code>
+            </p>
+            <ul>
+              <li>Nếu dieuKien1 của if sai, thì dieuKien2 của else if sẽ được xét, nếu dieuKien2 đúng, phần code 2 nằm trong else if sẽ được thực hiện. Ví dụ:
+                <code> let age = prompt("Your age? ")
+    
+                  if (age < 10) {
+                      console.log("You are Baby!");
+                  } else if (age < 18) {
+                      console.log("You are Teenager");
+                  }</code>
+              </li>
+              <li>Đoạn code trên giải nghĩa như sau:
+                <ul>
+                  <li>Cho người dùng nhập tuổi, số tuổi mà người dùng nhập sẽ được lưu vào biến age.</li>
+                  <li>Nếu (if) age nhỏ hơn 10 thì màn hình sẽ in ra "You are Baby!"</li>
+                  <li>Còn nếu (else if) age không nhỏ hơn 10, nhưng age nhỏ hơn 18 thì màn hình sẽ in ra "You are Teenager!"</li>
+                </ul>
+              </li>
+            </ul>
+            <p>3. Câu lệnh else
+              <code>    if (dieuKien1) {
+                // code 1
+            } else if (dieuKien2) {
+                // code 2
+            } else {
+                // code 3
+            }</code>
+            </p>
+            <ul>
+              <li>Nếu dieuKien1 của if và dieuKien2 của else if đều sai, thì phần code 3 nằm trong else sẽ được thực hiện. Ví dụ:
+                <code>    let age = prompt("Your age? ")
+    
+                  if (age < 10) {
+                      console.log("You are Baby!");
+                  } else if (age < 18) {
+                      console.log("You are Teenager");
+                  } else {
+                      console.log("You are Adult");
+                  }</code>
+              </li>
+              <li>Đoạn code trên giải nghĩa như sau:
+                <ul>
+                  <li>Cho người dùng nhập tuổi, số tuổi mà người dùng nhập sẽ được lưu vào biến age.</li>
+                  <li>Nếu (if) age nhỏ hơn 10 thì màn hình sẽ in ra "You are Baby!"</li>
+                  <li>Còn nếu (else if) age không nhỏ hơn 10, nhưng age nhỏ hơn 18 thì màn hình sẽ in ra "You are Teenager!"
+                  </li>
+                  <li>Những trường hợp còn lại (else), màn hình sẽ in ra "You are Adult!"</li>
+                </ul>
+              </li>
+              <p>Lưu ý: else nghĩa là Những trường hợp còn lại, đã là còn lại thì sẽ không có bất kỳ một điều kiện nào đằng sau nó, đoạn code phía trong else chỉ được thực hiện khi điều kiện của if và else if đều sai</p>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Array">
+          <article>
+            <header>Array (Mảng) </header>
+            <p>I. MẢNG LÀ GÌ? (ARRAY)</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Hãy tưởng tượng bạn là người viết chương trình quản lý menu các món ăn cho một nhà hàng. Bếp trưởng sẽ là người sử dụng phần mềm của bạn.</li>
+              <li>Ban đầu nhà hàng khai trương với một menu gồm 5 món ăn, bạn liệt kê chúng như sau:
+                <code>  let monAn1 = "com";
+                  let monAn2 = "thit";
+                  let monAn3 = "ca";
+                  let monAn4 = "trung";
+                  let monAn5 = "rau";</code>
+              </li>
+              <li>Một ngày đẹp trời, bếp trưởng muốn thêm món bún vào menu, lúc này bạn sẽ nghĩ ngay đến việc bật máy tính -> mở code ra -> khai báo thêm 1 biến mới để lưu thêm bún vào menu:
+                <code>  let monAn1 = "com";
+                  let monAn2 = "thit";
+                  let monAn3 = "ca";
+                  let monAn4 = "trung";
+                  let monAn5 = "rau"; 
+                  let monAn6 = "bun"; </code>
+              </li>
+              <li>Đến đây mọi chuyện vẫn ổn, chưa có gì khó khăn, nhưng bây giờ nhà hàng tuyển thêm 4 người phụ bếp nữa, mỗi người cảm thấy cần phải thêm một món mới của riêng họ vào menu. Lúc này thì có 1 vài vấn đề thực sự xảy ra:
+                <ul>
+                  <li>Càng ngày nhu cầu thêm mới món ăn vào menu ngày càng nhiều, chưa kể sau một thời gian, có những món không mấy ai dùng, nhà hàng cần phải xóa khỏi menu, hoặc sửa thành món khác.
+                  </li>
+                  <li>Bạn không thể phân thân ra để phục vụ từng ấy con người, mỗi người một nhu cầu khác nhau, vào những thời điểm khác nhau.</li>
+                  <li>Giả sử bạn có thể đáp ứng được nhu cầu của các phụ bếp cũng như bếp trưởng một cách thủ công như vậy, thì việc lập trình cũng không còn ý nghĩa.</li>
+                </ul>
+              </li>
+              <p>→ Array (Mảng) được sinh ra để giải quyết vấn đề này. Với Array, bạn hoàn tự động hóa việc đáp ứng tất cả những hành động, nhu cầu như thêm, sửa, xóa món ăn của bất kỳ ai, vào bất kỳ thời điểm nào.</p>
+            </ul>
+            <p>2. Khái niệm</p>
+            <ul>
+              <li>Array là một phương pháp dùng để lưu trữ nhiều dữ liệu trong một biến.</li>
+              <li>Array được dùng để lưu trữ dữ liệu, vậy nên Array cũng được tính là 1 Kiểu Dữ Liệu.</li>
+            </ul>
+            <p>3. Cú pháp
+              <code>let monAn = ["com", "thit", "ca", "trung", "rau"];</code>
+            </p>
+            <ul>
+              <li>monAn được gọi là một Array.</li>
+              <li>Tất cả các món ăn (phần tử) được liệt kê trong cặp ngoặc vuông ([]), ngăn cách nhau bởi dấu phẩy (,)</li>
+            </ul>
+            <p>II. CÁC THAO TÁC VỚI MẢNG (ARRAY)</p>
+            <ul>
+              <li>Khi học về một Kiểu Dữ Liệu mới, ngoại trừ những Kiểu Dữ Liệu cơ bản chỉ lưu được một dữ liệu đơn (như String, Number, ...), thì sẽ cần phải học 4 kỹ năng cơ bản sau đây để có thể làm việc thành thạo được với nó:
+                <ul>
+                  <li>Create: Thêm mới dữ liệu.</li>
+                  <li>Read: Đọc, truy cập dữ liệu.</li>
+                  <li>Update: Cập nhật dữ liệu.</li>
+                  <li>Delete: Xóa dữ liệu.</li>
+                </ul>
+              </li>
+              <li>Trước khi đi vào học 4 thao tác trên, bạn cần phải nắm được khái niệm Độ Dài Của Mảng (Length)
+                <code> let monAn = ["com", "thit", "ca", "trung", "rau"];</code>
+               <p>Trong Array monAn, bằng mắt thường bạn có thể dễ dàng thấy có 5 món ăn. Tuy nhiên hãy thử tưởng tượng Array monAn chứa hàng chục thậm chí hàng trăm món ăn, chắc chắn là bạn không đủ kiên nhẫn để đếm xem Array monAn chứa bao nhiêu món ăn.
+
+               → JS cung cấp cho bạn một cách để có thể nhanh chóng biết được số lượng phần tử có trong một Array:
+              <code>    let monAn = ["com", "thit", "ca", "trung", "rau"];
+                let soLuongMonAn = monAn.length;
+            
+                console.log(soLuongMonAn) // 5</code></p>
+              </li>
+              <li>Sau khi đã nắm được cách kiểm tra số lượng phần tử có trong một Array, chúng ta đã có thể sẵn sàng để làm quen với 4 thao tác cơ bản như đã giới thiệu ở trên.</li>
+            </ul>
+            <p>1. Create</p>
+            <ul>
+              <li>Đây là thao tác thêm mới phần tử vào Array, trong thực tế thì mỗi khi có một phần tử được thêm mới vào Array, thì hầu hết trong mọi tình huống nó sẽ được thêm vào cuối Array. Vì vậy trong bài này sẽ chỉ nhắc đến cách thêm phần tử vào cuối Array. Cú pháp như sau:
+                <code>let monAn = ["com", "thit", "ca", "trung", "rau"];
+                  monAn.push("bun dau");
+              
+                  console.log(monAn); // ["com", "thit", "ca", "trung", "rau", "bun dau"]</code>
+              </li>
+              <li>Trong ví dụ trên, sau khi thực hiện câu lệnh monAn.push("bun dau"), array monAn sẽ có thêm 1 phần tử "bun dau" nằm ở cuối cùng.</li>
+            </ul>
+            <p>2. Read</p>
+            <ul>
+              <li>Đây là thao tác Đọc, hay còn gọi là Truy cập.</li>
+              <li>Một phần tử trong Array sẽ được truy cập thông qua chỉ số (index).</li>
+              <li>Các phần tử trong Array được đánh số thứ tự từ trái qua phải, bắt đầu từ 0. Số thứ tự của 1 phần tử được gọi là chỉ số (index) của phần tử.</li>
+              <li>Ví dụ: 
+                <code>let monAn = ["com", "thit", "ca", "trung", "rau"];</code>
+                <ul>
+                  <li>"com" mang index là 0.</li>
+                  <li>"thit" mang index là 1.</li>
+                  <li>"ca" mang index là 2.</li>
+                  <li>"trung" mang index là 3.</li>
+                  <li>"rau" mang index là 4.</li>
+                </ul>
+              </li>
+              <li>Truy cập một phần tử:
+                <ul>
+                  <li>Cú pháp truy cập một phần tử thông qua index tương ứng như sau:
+                    <code>    let monAnDauTien = monAn[0];
+                      console.log(monAnDauTien) // com</code>
+                      <p>→ Điền index vào trong cặp ngoặc vuông ([]), giá trị tương ứng sẽ được lấy ra. Cụ thể trong trường hợp trên, điền 0 vào trong cặp ngoặc vuông ([]), giá trị "com" tương ứng với index 0 sẽ được lấy ra.</p>
+                  </li>
+                  <li>Truy cập tất cả phần tử:
+                    <ul>
+                      <li>Trên thực tế, nhắc đến Array là người lập trình sẽ có xu hướng nghĩ ngay đến việc kết hợp với Loop với mong muốn duyệt qua hết tất cả các phần tử có trong Array. Cụ thể ở đây là For Loop.</li>
+                      <li>Cú pháp:
+                        <code> let monAn = ["com", "thit", "ca", "trung", "rau"];
+
+                          for (let i = 0; i < monAn.length; i++) {
+                              console.log(i); // 0 1 2 3 4
+                          }</code>
+                      </li>
+                      → Tạo ra một vòng lặp for với biến khởi tạo i=0, chừng nào i vẫn còn nhỏ hơn độ dài của monAn (i < monAn.length) thì i vẫn còn được phép tăng (i++). Bên trong chỉ đơn giản là in ra i.
+                      → Giải thích một chút ở phần i < monAn.length:
+                      <li>monAn.length là độ dài (hay số lượng phần tử) của monAn, tức là 5.</li>
+                      <li>Phần tử cuối cùng của monAn là rau mang chỉ số (i) là 4.
+                      </li>
+                      <li>Vậy i < monAn.length có nghĩa là người lập trình đang muốn i chạy từ phần tử đầu tiên cho đến phần tử cuối cùng của Array. Chỉ số của phần tử cuối cùng trong một Array luôn nhỏ hơn độ dài của Array 1 đơn vị.
+                      </li>
+                      → Có thể dễ dàng nhận thấy, biến i ở trong vòng lặp đại diện cho chỉ số của từng phần tử trong monAn. Vậy để lấy ra giá trị của phần tử, chúng ta chỉ đơn giản sửa như sau:
+                      <code>   let monAn = ["com", "thit", "ca", "trung", "rau"];
+        
+                        for (let i = 0; i < monAn.length; i++) {
+                            console.log(monAn[i]); // com thit ca rau trung
+                        }</code>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p>3. Update</p>
+            <ul>
+              <li>Đây là thao tác Cập nhật giá trị mới cho một phần tử trong Array.</li>
+              <li>Cú pháp:
+                <code>    let monAn = ["com", "thit", "ca", "trung", "rau"];
+                  monAn[0] = "chao";
+                  console.log(monAn) // chao thit ca trung rau</code>
+              </li>
+              <li>Chỉ đơn giản là truy cập vào phần tử muốn thay đổi, sau đó gán cho nó một giá trị mới, như cách bạn đặt giá trị cho biến.</li>
+            </ul>
+            <p>4. Delete </p>
+            <ul>
+              <li>Đây là thao tác Xóa một phần tử ra khỏi Array.</li>
+              <li>Cú pháp: 
+                <code>   let monAn = ["com", "thit", "ca", "trung", "rau"];
+                  monAn.splice(0, 1);
+                  console.log(monAn); // thit ca trung rau</code>
+              </li>
+              <li>Câu lệnh monAn.splice(0, 1) được giải thích như sau:
+                <ul>
+                  <li>Bắt đầu từ vị trí 0 của Array monAn, hãy splice (xóa) đi 1 phần tử.</li>
+                  <li>Vậy monAn sẽ chỉ còn là:
+                    <code>let monAn = ["thit", "ca", "trung", "rau"];</code>
+                  </li>
+                </ul>
+                <li>Câu lệnh monAn.splice(0, 1) được giải thích như sau:
+                  <ul>
+                    <li>Bắt đầu từ vị trí 0 của Array monAn, hãy splice (xóa) đi 1 phần tử.</li>
+                    <li>Vậy monAn sẽ chỉ còn là:
+                      <code>  let monAn = ["thit", "ca", "trung", "rau"];</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>Nếu sửa câu lệnh trên thành monAn.splice(1, 2), giải thích như sau:
+                  <ul>
+                    <li>Bắt đầu từ vị trí 1 của Array monAn, hãy splice (xóa) đi 2 phần tử.</li>
+                    <li>Vậy monAn sẽ chỉ còn là:
+                      <code>let monAn = ["com", "trung", "rau"];</code>
+                    </li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Object">
+          <article>
+            <header>Object (Đối tượng)</header>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Hãy nhìn vào Array sau:
+                <code>let person = ["Quan", 22, "Ha Noi", 170, 60, 96, 5];</code>
+              </li>
+              <li>Có phải bạn đang thắc mắc về ý nghĩa của một số phần tử trong Array person? Ví dụ như các con số 60, 96, 5 mang ý nghĩa gì?</li>
+              <p>→ Đây chính là nhược điểm khi sử dụng Array để lưu trữ dữ liệu. Giả sử một ngày nào đó bạn phải phát triển tiếp phần code đang còn dang dở của đồng đội, khi tiếp nhận loại dữ liệu như trên, bạn sẽ rất mất thời gian, thậm chí là không thể tìm ra ý nghĩa của các loại dữ liệu trên.</p>
+              <p>→ Object được sinh ra để giải quyết vấn đề này.</p>
+            </ul>
+            <p>2. So sánh</p>
+            <ul>
+              <li>Cùng nhìn vào 2 Array sau đây:
+                <code>let monAn = ["com", "thit", "ca", "trung", "rau"];
+                  let person = ["Quan", 22, "Ha Noi", 170, 60, 96, 5];</code>
+              </li>
+              <li>Tại sao ở chương trước khi học về Array, nhìn vào monAn, bạn lại cảm thấy không hề khó hiểu?</li>
+              <p>→ Lý do là với monAn, các phần tử bên trong nó đều mang cùng một ý nghĩa là món ăn. Còn với person, mặc dùng lưu trữ thông tin xoay quanh về 1 người, nhưng mỗi phần tử mang một ý nghĩa khác nhau.</p>
+              <p> Object được sử dụng để lưu trữ những dữ liệu như person.</p>
+              <p>Vậy đứng trước một dữ liệu, nếu là để chứa những phần tử mang cùng một ý nghĩa, bạn nên sử dụng Array, còn để chứa những phần tử khác nhau về ý nghĩa, hãy chọn Object</p>
+            </ul>
+            <p>3. Khái niệm</p>
+            <ul>
+              <li>Object là một phương pháp dùng để lưu trữ nhiều dữ liệu trong một biến.</li>
+              <li>Object được dùng để lưu trữ dữ liệu, vậy nên Object cũng được tính là 1 Kiểu Dữ Liệu.</li>
+            </ul>
+            <p>4. Cú pháp</p>
+            <code>let person = {
+              name: "Quan",
+              age: 22,
+              location: "Ha Noi",
+              height: 170,
+              weight: 60
+          }</code>
+          <ul>
+            <li>Nhìn vào đoạn code trên, bạn đã dễ dàng hiểu ngay được ý nghĩa cụ thể của từng giá trị.</li>
+            <li>person được gọi là một Object.</li>
+            <li>Mỗi một thông tin bên trong person bao gồm 2 phần là property và value. Bên trái là property, bên phải là value. Mỗi một thông tin như vậy còn gọi là một cặp property, value. Mỗi cặp property, value được ngăn cách nhau bởi dấu phẩy (,). Trong đoạn code trên:
+              <ul>
+                <li>name là property.
+                  "Quan" là value.</li>
+                <li>age là property.
+                   22 là value.</li>
+                <li>location là property.
+                   "Ha Noi" là value.</li>
+                <li>height là property.
+                    170 là value.</li>
+                <li>weight là property.
+                     60 là value.</li>
+              </ul>
+            </li>
+          </ul>
+          <p>III. CÁC THAO TÁC VỚI ĐỐI TƯỢNG (OBJECT)</p>
+            <li>Cũng giống như Array, chúng a sẽ cần phải học 4 kỹ năng cơ bản bao gồm Create, Read, Update, Delete (CRUD) để có thể làm việc thành thạo được với Object</li>
+          <p>1. Create</p>
+            <ul><li>Cú pháp thêm mới một thông tin, hay còn gọi là thêm 1 cặp property, value vào Object như sau:
+              <code>    let person = {
+                name: "Quan",
+                age: 22,
+                location: "Ha Noi",
+                height: 170,
+                weight: 60
+            }
+            
+            person.yearOfBirth = 1996;</code>
+            </li>
+            <li>Sau khi thực hiện câu lệnh person.yearOfBirth = 1996, object person sẽ có thêm 1 cặp property, value là yearOfBirth: 1996</li>
+          </ul>
+          <p>2. Read</p>
+          <ul>  <li>Nếu như Array được Truy cập thông qua chỉ số, thì Object sẽ được Truy cập thông qua property.</li>
+            <li>Ví dụ:
+              <code> let person = {
+                name: "Quan",
+                age: 22,
+                location: "Ha Noi",
+                height: 170,
+                weight: 60
+            }
+            
+            console.log(person.age) // 22</code>
+            <ul>
+              <li>Dấu chấm (.) ở câu lệnh person.age có thể hiểu là "của".</li>
+              <li>person.age nghĩa là lấy ra giá trị tương ứng với property age của object person.</li>
+            </ul>
+            </li>
+          </ul>
+          <p>3. Update</p>
+          <ul>
+            <li>Quy tắc giống với Array, đơn giản là truy cập vào phần tử muốn thay đổi, sau đó gán cho nó một giá trị mới, như cách bạn đặt giá trị cho biến.</li>
+            <li>Cú pháp:
+              <code>let person = {
+                name: "Quan",
+                age: 22,
+                location: "Ha Noi",
+                height: 170,
+                weight: 60
+            }
+            
+            person.name = "Don";</code>
+            </li>
+          </ul>
+          <p>4.Delete</p>
+          <ul>
+            <li>Cú pháp xóa một cặp property, value vào Object như sau:
+              <code>    let person = {
+                name: "Quan",
+                age: 22,
+                location: "Ha Noi",
+                height: 170,
+                weight: 60
+            }
+            
+            delete person.age;</code>
+            </li>
+            <li>Câu lệnh delete person.age được giải thích như sau: xóa (delete) đi thông tin có property là age của object person.</li>
+          </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Function">
+          <article>
+            <header> Function (Hàm)</header>
+            <p>I. HÀM LÀ GÌ? (FUNCTION)</p>
+            <p>1. Giới thiệu</p>
+             <ul>
+               <li>Trước khi đến với Function, bạn hãy viết 1 chương trình:</li>
+               <ul>
+                 <li>In ra màn hình đoạn text sau: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</li>
+                 <li>In ra màn hình câu "Hello".</li>
+                 <li>Tiếp tục in ra màn hình đoạn text "Lorem ipsum..." một lần nữa.</li>
+                 <li>In ra màn hình câu "How are you today?".</li>
+                 <li>Tiếp tục in ra màn hình đoạn text "Lorem ipsum..." một lần nữa.</li>
+                 <li>In ra màn hình câu "Have a good day!".</li>
+                 <li>Đáp án: 
+                   <code>    console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+
+                    console.log("Hello");
+                
+                    console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+                
+                    console.log("How are you today?");
+                
+                    console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+                
+                    console.log("Have a good day!");</code>
+                 </li>                 
+               </ul>
+               <li>Sau khi làm xong, bạn sẽ nhận thấy có 1 vấn đề trong code của bạn, đó là cùng một đoạn code in ra màn hình đoạn text "Lorem ipsum...", bị lặp lại đến 3 lần.</li>
+               <p>→ Liệu có cách nào chỉ cần viết đoạn code in ra màn hình đoạn text "Lorem ipsum..." một lần, nhưng lại có thể sử dụng lại được nhiều lần không? Đây là lúc cần tới Function.</p>
+              </ul> 
+              <p>2. Khái niệm</p>
+              <ul>
+                <li>Function là một phương pháp lập trình nhằm giảm tải công sức của người lập trình: Viết code 1 lần, sử dụng mãi mãi</li>
+                <li>Không chỉ vậy, khi sử dụng function, code cũng trở nên sáng sủa và dễ đọc, dễ hiểu hơn.</li>
+                <li>Ý tưởng ở đây sẽ là thực hiện viết đoạn code bị lặp lại 1 lần, sau đó gói lại vào một cái hộp (function), đặt tên cho cái hộp. Mỗi khi cần dùng tới đoạn code chỉ cần lấy cái hộp đó mở ra dùng, không cần phải viết lại code 1 lần nữa.</li>
+              </ul>
+              <p>3. Cú pháp</p>
+              <code>function tenFunction() {
+                // Your code
+            }</code>
+            <ul>
+              <li>function: keyword bắt buộc cần phải có khi khai báo một Function.</li>
+              <li>tenFunction: tên của function, quy tắc đặt tên giống với quy tắc đặt tên biến.</li>
+              <li>Bên trong sẽ là đoạn code mà bạn muốn sử dụng mỗi khi cần</li>
+              <li>Cú pháp bên trên chỉ là bạn khai báo ra một function có tên là tenFunction, chứ chưa hề sử dụng nó. Cũng giống như việc bạn biết trên thế giới này có một người tên là Quân, nhưng nếu bạn không gọi Hey, Quân thì người đó sẽ không biết bạn có nhu cầu cần nhờ đến Quân.</li>
+              <p>→ Vậy cũng giống như gọi tên người, bạn chỉ cần gọi tên function đã được khai báo để sử dụng nó. Đằng sau tên có kèm theo cặp ngoặc tròn. Cú pháp:
+                <code>    tenFunction();
+                </code>
+                <li>Khi đó, phần code bên trong function tenFunction mới được thực hiện.</li>
+              </p>
+            </ul>
+            <p>4. Ví dụ</p>
+            <ul>
+              <li>Để giải quyết bài toán ở đầu chương, bạn khai báo một function như sau:
+                <code>function renderLorem() {
+                  console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+              }</code>
+              </li>
+              <li>Ở ví dụ trên, một function được khai báo ra với tên renderLorem, có nhiệm vụ thực hiện in ra màn hình đoạn text "Lorem ipsum..." mỗi khi được gọi.</li>
+              <li>Sau khi đã có function renderLorem, thực hiện gọi ở những vị trí tương ứng như yêu cầu của đề bài:
+                <code>  renderLorem();
+                  console.log("Hello");
+              
+                  renderLorem();
+                  console.log("How are you today?");
+              
+                  renderLorem();
+                  console.log("Have a good day!");</code>
+              </li>
+            </ul>
+            <p>II. THAM SỐ CỦA HÀM (FUNCTION PARAMETERS)</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Bạn hãy viết 1 chương trình: 
+                <ul>
+                  <li>Tạo ra một array myNumber không có phần tử nào bên trong.</li>
+                  <li>Cho người dùng nhập vào một số bất kỳ, sau đó kiểm tra xem số đó là số chẵn hay số lẻ, thông báo kết quả ra màn hình. Sau khi thông báo, thêm số mà người dùng đã nhập vào một array tên là myNumber được tạo ra từ trước.</li>
+                  <li>Tiếp tục cho người dùng nhập một số khác → kiểm tra số đó là chẵn hay lẻ → thông báo kết quả ra màn hình → thêm vào myNumber.</li>
+                  <li>Lặp lại quá trình trên 1 lần nữa (Nhập → Kiểm tra → Thông báo → Thêm vào array).</li>
+                  <code> let myNumber = [];
+
+
+                    let number1 = prompt("Input your number: ");
+                    
+                    if (number1 % 2 === 0){
+                        console.log('Even Number');
+                    } else {
+                        console.log('Odd Number');
+                    }
+                
+                    myNumber.push(number1);
+                
+                
+                    let number2 = prompt("Input your number: ");
+                    
+                    if (number2 % 2 === 0){
+                        console.log('Even Number');
+                    } else {
+                        console.log('Odd Number');
+                    }
+                
+                    myNumber.push(number2);
+                
+                
+                    let number3 = prompt("Input your number: ");
+                    
+                    if (number3 % 2 === 0){
+                        console.log('Even Number');
+                    } else {
+                        console.log('Odd Number');
+                    }
+                
+                    myNumber.push(number3);</code>
+                </ul>
+              </li>
+              <li>Nếu không sử dụng function, bạn sẽ gặp phải vấn đề giống như bài toán ở đầu chương, một đoạn code bị lặp lại nhiều lần.</li>
+              <li>Nếu sử dụng function, thì function được tạo ra sẽ không biết phải nhét gì vào những ô màu trắng như hình dưới:</li>
+                <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/function/function_img_1.png" alt="">
+               <p> → Cần phải cung cấp cho function một biến để nó có thể hoàn thành được nhiệm vụ của mình. Biến cung cấp cho function, được gọi là tham số (parameter). Cú pháp:</p>
+                <code>  function tenFunction(parameter) {
+                  // Use parameter to complete your code
+              }</code>
+              <li>parameter của một function sẽ được đặt trong cặp ngoặc tròn, bên cạnh tên function.</li>
+            </ul>
+            <p>2. Ví dụ, cách sử dụng</p>
+            <ul>
+              <li>Đi ngay vào giải quyết bài toán kiểm tra chẵn lẻ bên trên sẽ giúp bạn hiểu rõ nhất về cách sử dụng parameter.</li>
+              <li>Khai báo một function với tên checkNumber, có nhiệm vụ kiểm tra 1 số là chẵn hay lẻ, thông báo cho người dùng và thêm vào array myNumber:
+                <code> function checkNumber(numberparameter) {
+                  if (numberparameter % 2 === 0){
+                      console.log('Even Number');
+                  } else {
+                      console.log('Odd Number');
+                  }
+          
+                  myNumber.push(numberparameter);
+              }</code>
+              </li>
+              <li>Việc tiếp theo bạn cần làm không dừng lại ở việc chỉ cần gọi checkNumber() nữa, mà bạn sẽ cần phải cho function checkNumber biết nó sẽ phải kiểm tra số nào. Cú pháp:
+                <code> let myNumber = [];
+
+                  let number1 = prompt("Input your number: ");
+                  checkNumber(number1);
+              
+                  let number2 = prompt("Input your number: ");
+                  checkNumber(number2);
+                  
+                  let number3 = prompt("Input your number: ");
+                  checkNumber(number3);</code>
+              </li>
+              <li>Đoạn code trên được giải thích thông qua câu nói vui sau:
+                "Hey checkNumber, mày hãy nhận lấy số number1 mà người dùng vừa nhập vào, coi nó là numberparameter của mày, sau đó thực hiện công việc bên trong nhé."</li>
+            </ul>
+            <p>Lưu ý: Một function có thể khai báo một hoặc nhiều parameter, ngăn cách nhau bởi dấu phẩy (,). Khai báo ra bao nhiêu parameter, sử dụng bấy nhiêu.</p>
+            <p>III. HÀM CÓ RETURN (FUNCTION RETURN)</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Sử dụng hàm tính tổng bạn đã làm ở cuối chương trước, truyền vào 2 parameter lần lượt là 1 và 2. Thực hiện các yêu cầu sau:
+                <ul>
+                  <li>In ra màn hình "The result of sum between one and two is 3"</li>
+                  <li>In ra màn hình "Hello, we are One and Two, our sum is 3"</li>
+                </ul></li>
+               <p>→ Nếu bạn đang gặp khó khăn trong việc in ra màn hình đúng như yêu cầu, thì đây là lúc bạn cần tới return.</p> 
+            </ul>
+            <p>2. Khái niệm</p>
+            <ul>
+              <li>return là một keyword được sử dụng bên trong function, với mong muốn function chỉ trả ra kết quả của đoạn code bên trong. Từ đó chúng ta có thể sử dụng kết quả với nhiều tình huống khác nhau.</li>
+            </ul>
+            <p>3. Cú pháp</p>
+            <ul>
+              <li>Chúng ta sẽ tìm hiểu cách viết cũng như cách sử dụng keyword return thông qua việc giải quyết bài toán ở đầu chương:</li>
+              <li>Giả sử hàm tính tổng bạn đã biết được viết như sau:
+                <code> function add(a, b) {
+                  console.log(a+b);
+              }</code>
+              </li>
+              <li>Thay vì console.log(a+b), bạn hãy sửa thành:
+                <code> function add(a, b) {
+                  return a+b;
+              }</code>
+              </li>
+              <li>Như vậy, function add lúc này sẽ chỉ có nhiệm vụ tính toán và đưa ra kết quả thôi, không hề liên quan đến việc in ra màn hình → Với việc sử dụng return, bạn có thể dễ dàng trình bày kết quả theo từng tình huống khác nhau. Cụ thể:
+                <code>    console.log("The result of sum between one and two is ", add(1, 2));
+
+                  console.log("Hello, we are One and Two, our sum is ", add(1, 2));</code>
+              </li>
+              <li>Bạn cũng có thể sử dụng biến để chứa kết quả return của hàm, sau đó mới mang biến đó đi sử dụng. Ví dụ:
+                <code>   let addResult = add(1, 2);
+
+                  console.log(`The result of sum between one and two is ${addResult}`);
+              
+                  console.log(`Hello, we are One and Two, our sum is ${addResult}`);</code>
+              </li>
+              <li>Có thể thấy, code minh bạch và dễ hiểu hơn rất nhiều. → Khuyến cáo nên sử dụng cách này.</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Function_Callback">
+          <article>
+            <header> Function Callback (Hàm gọi lại)</header>
+         <ul>Callback là một thứ vô cùng khó hiểu nếu chúng ta đọc khái niệm lý thuyết một cách thuần túy. Chính vì thế chúng ta sẽ tìm hiểu callback qua ví dụ sau:
+           <li>Chi là một người gặp rất nhiều khó khăn trong việc quản lý thời gian biểu của mình. Xây dựng 2 function để giúp Chi quản lý thời gian biểu của mình, với các chức năng lần lượt là học bài và đi ngủ, sau đó gọi lần lượt cả 2 function để sử dụng như sau:
+             <code>  function hocBai() {
+              setTimeout(function() {
+                  console.log("study");
+              }, 2000);
+          }
+      
+          function diNgu() {
+              console.log("zzZZZzzz...");
+          }
+      
+          hocBai();
+          diNgu();</code>
+           </li>
+           <li>Chạy thử đoạn code trên, bạn sẽ thấy Chi chưa kịp học bài đã vội đi ngủ. Để đảm bảo Chi thực hiện các việc theo thứ tự học bài → đi ngủ, chúng ta sẽ cần đến một điệp viên báo cho chúng ta biết, khi nào Chi học bài xong. Điệp viên này có mật danh là callback.</li>
+           <li>callback muốn biết chính xác lúc nào hocBai được thực hiện xong, thì callback phải nằm trong chính function hocBai, như sau:
+             <code>        function hocBai(callback) {
+              setTimeout(function() {
+                  console.log("study");
+                  callback(); // đây là lúc việc học xảy ra xong, callback nằm đây để báo cáo lại cho chúng ta!
+              }, 2000);
+          }</code>
+           </li>
+           <li>Dừng lại ở đây một chút, để ý kỹ bạn sẽ thấy callback đang là một parameter của hocBai, và callback được sử dụng bằng câu lệnh callback();. Cặp ngoặc đơn bên cạnh callback cho thấy hocBai sẽ chỉ nhận parameter là một function.</li>
+           <li>Bây giờ, nhiệm vụ của chúng ta là sẽ đi tạo ra một điệp viên thực thụ (function), đóng vai làm callback, chui vào bên trong hocBai, như sau:
+             <code>       function hocBai(callback) {
+              setTimeout(function() {
+                  console.log("study");
+                  callback(); // đây là lúc việc học xảy ra xong, callback nằm đây để báo cáo lại cho chúng ta!
+              }, 2000);
+          }
+  
+          function diNgu() {
+              console.log("zzZZZzzz...");
+          }
+  
+          // tạo ra một điệp viên thực thụ, tên là meCuaChi.
+          // meCuaChi sẽ giúp Chi thực hiện việc diNgu ngay sau khi Chi học bài xong ( console.log("study") ).
+          let meCuaChi = function() {
+              diNgu();
+          }
+  
+          hocBai(meCuaChi);</code>
+           </li>
+           <li>Đoạn code:
+             <code>  let meCuaChi = function() {
+              diNgu();
+          }
+  
+      hocBai(meCuaChi);</code>
+           </li>
+           <li>Có thể viết gọn lại như sau:
+             <code>   hocBai(function() {
+              diNgu();
+          });</code>
+           </li>
+         </ul>
+         <p>Callback sẽ được áp dụng rất nhiều khi thực hiện các chức năng tương tác giữa người dùng và trang web, sẽ được hướng dẫn chi tiết trong các chương tới</p>
+          </article>
+        </section>
+        <section class="main-section" id="Html">
+          <article>
+            <header>HTML (Hypertext Markup Language) </header>
+            <p>I. HTML là gì?</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Nếu bạn đã quên mất HTML có liên quan thế nào đến JavaScript, thì bạn hãy quay lại chương đầu tiên Giới thiệu khoá học (Introduction) để nhớ lại thông qua ví dụ trực quan, trước khi đến với những khái niệm dưới đây</li>
+            </ul>
+            <p>2. Khái niệm</p>
+            <ul>
+              <li>HTML là chữ viết tắt của cụm từ Hyper Text Markup Language (Ngôn ngữ đánh dấu siêu văn bản).</li>
+              <li>Tất cả những nội dung hiển thị trên một trang web bất kỳ, đều được thể hiện qua HTML.</li>
+            </ul>
+            <p>II. CÚ PHÁP</p>
+            <p>Cách tạo một file html đã được nói trong chương đầu tiên của khóa học. Trong chương này chúng ta sẽ đi ngay vào các khái niệm cần thiết của HTML.</p>
+            <p>1. Thẻ (Tag hoặc Element)</p>
+            <ul>
+              <li>Mỗi một nội dung bất kỳ được khai báo ra để hiển thị trên trang web đều được bọc trong một cặp thẻ (tags).</li>
+              <li>Một cặp thẻ được viết ra như sau:
+                <code> < h1 > This is Heading Level 1 < /h1 > </code>
+                <p>h1 được gọi là tên của thẻ. Thẻ h1 Bao gồm 3 phần:
+                  <ul>
+                    <li>< h1>: Thẻ mở (Openning tag)</li>
+                      <li>< /h1>: Thẻ đóng (Openning tag)
+                      </li>
+                      <li>This is Heading Level 1: Nội dung của thẻ (text). Đây là phần mà người sử dụng trang web sẽ nhìn thấy</li>
+                  </ul>
+                </p>
+              </li>
+            </ul>
+            <p>2. Cấu trúc của 1 file html</p>
+            <ul>
+              <li>Bạn hãy nhìn tổng thể bộ khung html được dựng sẵn (đã hướng dẫn ở chương đầu), chúng ta sẽ cùng tìm hiểu bộ khung này bao gồm những gì.</li>
+              <code>< !DOCTYPE html>
+              </code>
+              <p>→ Nhìn qua thì có vẻ giống 1 thẻ HTML, nhưng thực chất đây không phải là 1 thẻ. !DOCTYPE chỉ cho trình duyệt web biết được phiên bản ngôn ngữ được sử dụng trong trang web (ở đây là html 5).</p>
+              <li>Tiếp đến là thẻ html, đây là thẻ bao lấy toàn bộ nội dung của cả file html, bạn có thể click vào tên của thẻ, sẽ thấy thẻ mở và thẻ đóng sáng lên. (Bạn hãy xóa đi những phần không cần thiết, để gọn gàng như hình dưới)
+              <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-1.png" alt="">
+              <code> < html lang="en">
+
+                </ html></code>
+                <ul>
+                  <li>lang="en": đây được gọi là attribute của thẻ, bên trái dấu bằng là tên của attribute, bên phải dấu bằng là giá trị của attribute.</li>
+                  <li>để hỗ trợ cho trình duyệt và công cụ tìm kiếm.</li>
+                </ul>
+                </li>
+                <li>Bên trong thẻ html chia làm 2 phần: head và body:
+                  <ul>
+                    <li>Thẻ head được sử dụng để chứa tiêu đề và những khai báo ban đầu của trang web cho trình duyệt biết, thông qua thẻ meta và thẻ title:
+                      <code>   < html lang="en">
+                        < meta charset="UTF-8">
+                        < title>Document</title>
+                    < /html></code>
+                    <ul>
+                      <li>< meta charset="UTF-8">: đây là thẻ đặc biệt, không có thẻ đóng (Closing tag). Thẻ này có tác dụng khai báo cho trình duyệt biết trang web sử dụng chuẩn UTF-8. Bạn có thể tìm hiểu thêm về chuẩn UTF-8</li>
+                      <li>< title>Document< /title>: Hãy thử thay đổi phần text nằm giữa cặp thẻ, sau đó mở file html trên trình duyệt:
+                        <code>< title>The First HTML< /title></code>
+                        <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-2.png" alt="">
+                        <p>→ Nội dung của thẻ title sẽ quyết định tiêu đề của trang web.</p>
+                      </li>
+                    </ul>
+                    </li>
+                    <li>Thẻ body sẽ là nơi chứa toàn bộ nội dung hiển thị của trang web. Bạn hãy thử viết một nội dung bất kỳ bên trong thẻ body:
+                      <code> < body>
+                        Hello, this is my first html file
+                    < /body></code>
+                    <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-3.png" alt="">
+                    </li>
+                    <p>Lưu ý: Vì thẻ body là nơi chứa toàn bộ nội dung hiển thị trên trang web, nên các nội dung được giới thiệu ở phía dưới đây đều được viết bên trong cặp thẻ body</p>
+                  </ul>
+                </li>
+            </ul>
+            <p>III. CÁC THẺ CƠ BẢN</p>
+            <p>HTML khá dễ để tiếp cận, nhưng để nắm được hết tất cả các tính năng, các thẻ của HTML thì không thể trong một sớm một chiều được, và thẻ nào được sử dụng cũng sẽ tùy vào từng trường hợp cụ thể. Vì vậy trong chương này sẽ chỉ giới thiệu một vài thẻ phổ biến nhất, xuất hiện trong hầu hết các trang web</p>
+            <p>1. Thẻ heading</p>
+            <ul>
+              <li>Thẻ heading thường được sử dụng để hiển thị các tiêu đề bài viết.
+              <code> < h1>This is Heading Level 1< /h1></code>
+              <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-4.png" alt="">
+              </li>
+              <li>Thẻ heading bao gồm 6 level, từ  < h1>< /h1> cho đến < h6>< /h6>. Thẻ h1 có cỡ chữ to và đậm nhất, giảm dần cho đến thẻ h6.</li>
+            </ul>
+            <p>2. Thẻ paragraph</p>
+            <ul>
+              <li>Thẻ paragraph (thẻ p) được sử dụng cho những đoạn văn bản, nội dung bài viết.
+                <code> < p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, doloremque architecto? Enim quaerat nesciunt dolorum, quisquam labore eius. Sunt nemo similique obcaecati suscipit dolorem reiciendis, consequuntur quis ducimus repellat quia!< /p></code>
+              </li>
+            </ul>
+            <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-5.png" alt="">
+            <p>3. Thẻ anchor</p>
+            <ul>
+              <li>Thẻ anchor (thẻ a) được sử dụng để tạo một dòng text có thể click được, khi click vào sẽ đưa người dùng đến một địa chỉ web.</li>
+              <code>  < a href="https://www.google.com/">Hey, let's click Me< /a></code>
+              <li>Thẻ a có một attribute là href, attribute này mang giá trị là https://www.google.com/.<br>
+
+                Tất cả các attribute đều được viết bên trong thẻ mở (Openning tag)</li>
+                <li>Hey, let's click Me là nội dung mà người sử dụng web có thể nhìn thấy và bấm vào được. Khi người dùng bấm vào thì sẽ được đưa đến trang web viết trong attribute href (https://www.google.com/)
+                  <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-6.png" alt="">
+                </li>
+                <li>Khi bấm vào, bạn sẽ được chuyển đến trang Google, đè mất lên trang của bạn. Hãy thêm attribute target với giá trị là dấu # như sau để khi người dùng bấm, trang Google sẽ được mở ở một tab khác trên trình duyệt
+                  <code> < a href="https://www.google.com/" target="#">Hey, let's click Me< /a></code>
+                </li>
+            </ul>
+            <p>4. Thẻ image</p>
+            <ul>
+              <li>Thẻ image (thẻ img) được sử dụng để hiển thị nội dung là ảnh.</li>
+              <code>< img src="" alt=""></code>
+              <li>Thẻ img là một thẻ đặc biệt, không có thẻ đóng (Closing tag)</li>
+              <li>Thẻ img có 2 attribute là src và alt:
+                <ul>
+                  <li>Phần giá trị trong Attribute src sẽ là link hoặc đường dẫn của bức ảnh mà bạn muốn hiển thị. Ở đây mình sẽ lấy một link ảnh online:
+                    <code>< img src="https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg" alt="" >
+                    </code>
+                    <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-7.png" alt="">
+                    <li>Phần giá trị trong Attribute alt sẽ có tác dụng khi ảnh của bạn không thể load được, có thể là do link ảnh sai, hoặc do mạng không ổn định.</li>
+                    <code>  < img src="https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy" alt="This is an image about a cute dog" ></code>
+                    <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/html/html-8.png" alt="">
+                    <p>→ đoạn code trên đã cố tình làm cho link bức ảnh bị sai, bằng cách xóa đi phần .jpg, như vậy đoạn text trong attribute alt sẽ phát huy tác dụng.</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Dom_Manipulations">
+          <article>
+            <header>Dom Manipulations(Tháo tác với DOM)</header>
+            <p>I. DOM LÀ GÌ?</p>
+            <p>1. Giới thiệu</p>
+            <ul>
+              <li>Từ đầu khóa học đến giờ, chúng ta học JavaScript và thực hành chủ yếu dựa trên màn hình console (inspect).</li>
+              <li>HTML và hiển thị được một vài nội dung trên trang web.</li>
+            </ul>
+            <p>→ Chúng ta chưa hề nhìn thấy được JavaScript có thể làm được gì đối với những nội dung hiển thị trên trang web. JavaScript có thể tác động như thế nào tới các thẻ HTML có sẵn từ file HTML gốc?</p>
+            <p>→ DOM được sinh ra để giúp JS làm điều này. Sau khi học hết chương này, bạn sẽ thấy đã sử dụng JavaScript là không thể không nhắc đến DOM.</p>
+            <p>2. Khái niệm</p>
+            <ul>
+              <li>DOM là viết tắt của Document Object Model.</li>
+              <li>Nhờ có DOM, JavaScript có thể truy cập vào các thẻ HTML và thay đổi chúng.</li>
+              <li>Giả sử chúng ta có một đoạn HTML như sau:
+                <code>< !DOCTYPE html>
+                  < html lang="en">
+                      < head>
+                          < title>The First HTML</ title>
+                      < /head>
+                      < body>
+                          < h1>This is Heading Level 1< /h1>
+                      < /body>
+                  < /html></code>
+              </li>
+              <li>Khi xử lý đoạn HTML trên, trình duyệt sẽ dựng đoạn code trên thành một cấu trúc dạng cây như sau:
+                <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/dom/dom-1.png" alt="">
+              </li>
+              <li>Cấu trúc dạng cây này được gọi là DOM Tree. Mỗi một thành phần trong DOM Tree được gọi là một Node.</li>
+            </ul>
+            <p>II. DOM GET ELEMENT</p>
+            <p>Chúng ta sẽ học cách lấy ra một hoặc nhiều thẻ HTML để làm việc với chúng.<br>
+              Có 3 cách để lấy ra một thẻ HTML:</p>
+              <p>1. Get by id:</p>
+              <ul>
+                <li>Cách này thường được sử dụng để lấy ra một thẻ HTML duy nhất, dựa vào id của thẻ.</li>
+                <li>id của thẻ là một attribute của thẻ đó, chúng ta thêm attribute id và đặt tên id cho thẻ muốn lấy như sau (đã là id thì nên là duy nhất trong cả trang web):
+                  <code>< h1 id="heading-1">This is Heading Level 1< /h1></code>
+                </li>
+                <li>Chúng ta đặt cho thẻ h1 một id tên là heading-1. Sau đó sang file JavaScript, tiến hành chọn thẻ dựa vào id như sau:
+                  <code> let h1 = document.getElementById('heading-1');
+
+                    console.log(h1);</code>
+                </li>
+                <li>Ở đoạn code trên, một biến h1 được tạo ra để chứa thẻ mà chúng ta đã chọn.</li>
+                <li>document.getElementById() là chức năng có sẵn của JavaScript, công việc của bạn chỉ là điền tên id đã đặt cho thẻ vào bên trong cặp ngoặc đơn.</li>
+                <li>Sau đó in ra màn hình thẻ h1, kết quả như sau:
+                  <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/dom/dom-2.png" alt="">
+                </li>
+                <li>Bạn cũng có thể bóc từng phần nhỏ của thẻ ra rồi in ra màn hình như sau:
+                  <code>    console.log(h1.innerHTML); // Lấy ra phần text của thẻ
+
+                    console.log(h1.id); // Lấy ra id của thẻ</code>
+                </li>
+                <p>→ Vậy những thứ như innerHTML và id lấy ở đâu ra? Và làm sao để biết được trong thẻ h1 này có chứa những thông tin gì?<br>
+
+                  → Bạn hãy sửa console.log(h1) thành console.dir(h1). Kết quả như sau:</p>
+                  <img src="https://github.com/edtechkidsvn/c4ejs-student-book/raw/master/images/dom/dom-4.png" alt="">
+                  <li>Bạn hãy mở thẻ h1 ra để xem bên trong nó có những property nào, mang value là gì. innerHTML và id cũng được lấy từ đây ra. Tùy vào từng tình huống cụ thể trong quá trình phát triển web mà bạn có thể lựa chọn lấy ra cho mình như property phù hợp.</li>
+              </ul>
+          </article>
+        </section>
+      </main>
+      
+</body>
+</html>
